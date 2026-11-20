@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg-main: #f6f8fb;
+  --color-bg-card: #ffffff;
+  --color-border: #eaecf0;
+  --color-border-hover: #d0d5dd;
+  --color-text-primary: #101828;
+  --color-text-secondary: #475467;
+  --color-text-muted: #667085;
+  --color-brand: #4f46e5;
+  --color-brand-light: #eff2fe;
+  --color-brand-hover: #4338ca;
+  --color-emerald: #10b981;
+  --color-emerald-light: #ecfdf5;
+  --color-blue: #0284c7;
+  --color-blue-light: #e0f2fe;
+  --color-amber: #f59e0b;
+  --color-amber-light: #fef3c7;
+  --color-red: #ef4444;
+  --color-red-light: #fee2e2;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f6f8fb;
+  color: #101828;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Crisp Modern SaaS Slider Styling */
+input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 999px;
+  background: #eaecf0;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #4f46e5;
+  border: 2px solid #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  box-shadow: 0 2px 6px rgba(79, 70, 229, 0.4);
+}
+
+input[type=range]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #4f46e5;
+  border: 2px solid #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Number input reset */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* Light Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Responsive Grid Breakpoints */
+@media (max-width: 1200px) {
+  .metric-kpi-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .dashboard-main-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .page-horizontal-layout {
+    grid-template-columns: 1fr !important;
+  }
+  .dashboard-two-col {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .metric-kpi-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .donut-breakdown-container {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .membership-charts-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Mobile sidebar overlay */
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(16, 24, 40, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 40;
+}
